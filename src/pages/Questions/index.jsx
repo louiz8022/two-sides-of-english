@@ -1,14 +1,14 @@
 import { Navbar } from "../../components/NavBar"
-import { FullPage } from "../../components/FullPage"
 
 export const Questions = () => {
 
     return (
-
-        <FullPage>
+        <main>
+            <Navbar />
             <div>
-                <p>Question 1 of 10</p>
+            <h2>questions 1 of 10 </h2>
+            <h1>What do Americans call "Trainers"?</h1>
             </div>
-        </FullPage>
+        </main>
     )
 }
