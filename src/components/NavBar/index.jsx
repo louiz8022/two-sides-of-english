@@ -13,17 +13,20 @@ export const Navbar = () => {
                 <Link
                     to="/"
                     className="flex items-center gap-1 text-amber-50 font-semibold hover:text-brand-blue-dark">
-                    Home </Link>
+                    Home
+                </Link>
 
                 <Link
                     to="/questions"
                     className="px-4 py-2 bg-brand-blue text-amber-50 rounded-full hover:bg-brand-blue-dark font-bold transition">
-                    questions</Link>
+                    questions
+                </Link>
 
                 <Link
                     to="/results"
                     className="px-4 py-2 bg-brand-blue text-amber-50 rounded-full hover:bg-brand-blue-dark font-bold transition">
-                    results </Link>
+                    results
+                </Link>
             </div>
         </header>
     )

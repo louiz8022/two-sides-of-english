@@ -2,6 +2,7 @@ import { Brain } from "lucide-react"
 import { Navbar } from "../../components/NavBar"
 import { BookOpen } from "lucide-react"
 import { Play } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export const Home = () => {
 
@@ -17,7 +18,7 @@ export const Home = () => {
                 </article>
 
                 <div className="grid lg:grid-cols-3 space-y-5 space-x-5">
-                    <section className="space-y-4">
+                    <section className="space-y-4 w-max h-max">
                         <figure className="w-36 h-36 rounded-full bg-pink-300 flex items-center justify-center ">
                             <BookOpen size="70px" color="white" />
                         </figure>
@@ -25,24 +26,26 @@ export const Home = () => {
                         <p className="text-center text-lg font-medium">10 Questions</p>
                     </section>
 
-                    <section className="space-y-4">
+                    <section className="space-y-4 w-max h-max">
                         <figure className="w-36 h-36 rounded-full bg-blue-400 flex items-center justify-center ">
-                        <Brain size="70px" color="white" />
+                            <Brain size="70px" color="white" />
                         </figure>
                         <p className="text-center text-lg font-medium"  >Learn and Discover</p>
                     </section>
 
-                    <section className="space-y-4">
+                    <section className="space-y-4 w-max h-max">
                         <figure className="w-36 h-36 rounded-full bg-red-400 flex items-center justify-center ">
-                        <Play size="70px" color="white" />
+                            <Play size="70px" color="white" />
                         </figure>
                         <p className="text-center text-lg font-medium">Instant feedback</p>
                     </section>
                 </div>
 
-                <button className="rounded-full text-neutral-50 cursor-pointer text-lg hover:brightness-110 transition-all bg-blue-700 py-4 px-10">
-                    Start Quiz
+                <Link to="/questions">
+                    <button className="rounded-full text-neutral-50 cursor-pointer text-lg hover:brightness-110 transition-all bg-blue-700 py-4 px-10">
+                        Start Quiz
                     </button>
+                </Link>
             </div>
         </main>
     )
