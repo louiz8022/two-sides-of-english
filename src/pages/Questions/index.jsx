@@ -1,11 +1,13 @@
 import { Navbar } from "../../components/NavBar"
+import { FullPage } from "../../components/FullPage"
 
 export const Questions = () => {
 
     return (
-        <main>
-            <Navbar />
-            <h1>questions</h1>
-        </main>
+        <FullPage>
+            <div>
+                <p>Question 1 of 10</p>
+            </div>
+        </FullPage>
     )
 }
