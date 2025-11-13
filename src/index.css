@@ -1,2 +1,7 @@
 /* src/index.css */
 @import "tailwindcss";
+
+@theme {
+    --font-momo: "Momo Trust Display", sans-serif;
+    --font-outfit: "Outfit", sans-serif;
+}
