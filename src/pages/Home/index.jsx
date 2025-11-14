@@ -2,13 +2,28 @@ import { Brain } from "lucide-react"
 import { Navbar } from "../../components/NavBar"
 import { BookOpen } from "lucide-react"
 import { Play } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import axios from "axios"
 
 export const Home = () => {
+    const navigate = useNavigate()
+
+    const handleStart = async () => {
+        try {
+            const response = await axios.post("/auth/session", {},{
+                baseURL: import.meta.env.VITE_API_URL
+            })
+
+            localStorage.setItem("accessToken", response.data.accessToken)
+
+            navigate("/questions")
+        } catch (error) {
+            console.error({ handleStartError: error })
+        }
+    }
 
     return (
         <main>
-            < Navbar />
 
             <div className="bg-amber-50 space-y-10 text-slate-950 min-h-dvh flex flex-col items-center justify-center">
                 <article className="w-full text-center space-y-5 flex flex-col items-center justify-center">
@@ -41,11 +56,9 @@ export const Home = () => {
                     </section>
                 </div>
 
-                <Link to="/questions">
-                    <button className="rounded-full text-neutral-50 cursor-pointer text-lg hover:brightness-110 transition-all bg-blue-700 py-4 px-10">
-                        Start Quiz
-                    </button>
-                </Link>
+                <button onClick={() => handleStart()} className="rounded-full text-neutral-50 cursor-pointer text-lg hover:brightness-110 transition-all bg-blue-700 py-4 px-10">
+                    Start Quiz
+                </button>
             </div>
         </main>
     )
