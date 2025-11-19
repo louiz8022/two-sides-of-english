@@ -4,4 +4,14 @@
 @theme {
     --font-momo: "Momo Trust Display", sans-serif;
     --font-outfit: "Outfit", sans-serif;
+    --color-brand-black: #000000;
+    --color-brand-blue-dark: #2e384d;
+    --color-brand-red: #c4252d;
+    --color-brand-red-dark: #652225;
+    --color-brand-gray-dark: #1e1c1e;
+    --color-brand-blue-dark-two: #0f2a4f;
+    --color-brand-blue: #1c3b6b;
+    --color-brand-blue-light: #3a68a1;
+    --color-brand-gray: #b8bfc9;
+    --color-brand-white: #ffffff;
 }
