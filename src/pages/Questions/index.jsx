@@ -22,16 +22,16 @@ export const Questions = () => {
         axios.get("/questions", {
             baseURL: import.meta.env.VITE_API_URL
         })
-        .then(response => {
-            console.log({ questionsLoaded: response.data.length })
-            setQuestions(response.data)
-        })
-        .catch(error => {
-            console.error({ getQuestionsError: error })
-        })
-        .finally(() => {
-            setIsLoading(false)
-        })
+            .then(response => {
+                console.log({ questionsLoaded: response.data.length })
+                setQuestions(response.data)
+            })
+            .catch(error => {
+                console.error({ getQuestionsError: error })
+            })
+            .finally(() => {
+                setIsLoading(false)
+            })
     }, [])
 
     const question = useMemo(
@@ -181,8 +181,9 @@ export const Questions = () => {
                     `}>
                         <p>
                             {isCorrect
-                                ? "✅ Resposta correta! Parabéns."
-                                : "❌ Resposta incorreta. A resposta correta está destacada acima."}
+                                ? question.feedbackCorrect
+                                : question.feedbackIncorrect
+                            }
                         </p>
                     </article>
                 )}
