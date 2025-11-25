@@ -18,20 +18,20 @@ export const Results = () => {
                             </figure>
                         </div>
 
-<div className="mb-8">
-    <h2 className="text-5xl md:text-7xl font-bold text-slate-700 mb-4"> 30%</h2>
-    <p className="text-2xl md:text-3xl font-bold text-slate-600 mb-2">keep trying, you got better</p>
-</div>
-                       <div className=" flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-400  text-slate-900 bg-green-500 text-lg font-bold rounded-full shadow-lg hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-fuchsia-700 transition-all duration-300 ease-in-out "> 
-                           <RotateCcw className="h-5 w-5" />
-                           Try Again
-                            </button> 
+                        <div className="mb-8">
+                            <h2 className="text-5xl md:text-7xl font-bold text-slate-700 mb-4"> 30%</h2>
+                            <p className="text-2xl md:text-3xl font-bold text-slate-600 mb-2">keep trying, you got better</p>
+                        </div>
+                        <div className=" flex flex-col sm:flex-row gap-4 justify-center">
+                            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-400  text-slate-900 bg-green-500 text-lg font-bold rounded-full shadow-lg hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-fuchsia-700 transition-all duration-300 ease-in-out ">
+                                <RotateCcw className="h-5 w-5" />
+                                Try Again
+                            </button>
                             <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-950 hover: bg-amber-700  text-amber-500 text-lg font-bold rounded-full shadow-lg hover:scale-105 hover:shadow-xl focus:outline-amber-400 focus:ring-red-400 focus:ring-blue-900 transition-all duration-300 ease-in-out " >
                                 <House className="h-5 w-5" />
                                 Back To Home
-                                </button>
-                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
 

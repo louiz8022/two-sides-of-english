@@ -1,6 +1,8 @@
 import { useState, useEffect, useMemo } from "react"
 import axios from "axios"
 import { Alternative } from "../../components/Alternative"
+import { useNavigate } from "react-router-dom"
+
 
 export const Questions = () => {
     const token = localStorage.getItem("accessToken")
@@ -14,6 +16,8 @@ export const Questions = () => {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
     const [submitError, setSubmitError] = useState(null)
+    const navigate = useNavigate()
+
 
     // Buscar questões
     useEffect(() => {
@@ -89,7 +93,7 @@ export const Questions = () => {
             setShowFeedback(false)
             setIsCorrect(false)
         } else {
-            alert("Quiz concluído!")
+            navigate("/results")
         }
     }
 
