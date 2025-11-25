@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 export const Questions = () => {
     const token = localStorage.getItem("accessToken")
+    const sessionId = localStorage.getItem("sessionId") // 🔥 ESSENCIAL
 
     const [questions, setQuestions] = useState([])
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -60,6 +61,7 @@ export const Questions = () => {
 
         try {
             const response = await axios.post("/answer", {
+                sessionId,
                 questionId,
                 answer
             }, {
@@ -93,7 +95,8 @@ export const Questions = () => {
             setShowFeedback(false)
             setIsCorrect(false)
         } else {
-            navigate("/results")
+            navigate(`/results`)
+
         }
     }
 
