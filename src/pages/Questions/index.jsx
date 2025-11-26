@@ -108,7 +108,7 @@ export const Questions = () => {
 
     if (isLoading) {
         return (
-            <main className="min-h-screen flex items-center justify-center bg-amber-50">
+            <main className="min-h-screen flex items-center justify-center bg-brand-gray">
                 <p className="text-xl text-neutral-600">Carregando questões...</p>
             </main>
         )
@@ -116,14 +116,14 @@ export const Questions = () => {
 
     if (!question) {
         return (
-            <main className="min-h-screen flex items-center justify-center bg-amber-50">
+            <main className="min-h-screen flex items-center justify-center bg-brand-gray">
                 <p className="text-xl text-red-600">Nenhuma questão encontrada ou quiz finalizado.</p>
             </main>
         )
     }
 
     return (
-        <main className="min-h-screen bg-amber-50 flex flex-col items-center justify-center py-12">
+        <main className="min-h-screen bg-brand-gray flex flex-col items-center justify-center py-12">
             <div className="w-full bg-neutral-50 border space-y-6 border-neutral-600 mx-auto max-w-lg shadow-md rounded-lg p-12">
 
                 <article className="space-y-6">
@@ -173,9 +173,9 @@ export const Questions = () => {
                     className={`
                         w-full mt-4 p-3 rounded-lg text-white font-bold transition-colors
                         ${showFeedback
-                            ? "bg-blue-600 hover:bg-blue-700"
+                            ? "bg-brand-blue-light hover:bg-brand-blue"
                             : (buttonDisabled
-                                ? "bg-neutral-400 cursor-not-allowed"
+                                ? "bg-neutral-400  cursor-not-allowed"
                                 : "bg-green-600 hover:bg-green-700")}
                     `}
                 >

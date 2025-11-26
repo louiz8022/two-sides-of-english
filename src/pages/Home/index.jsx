@@ -25,7 +25,8 @@ export const Home = () => {
 
     return (
         <main>
-            <div className="bg-brand-gray space-y-10 text-slate-950 min-h-dvh flex flex-col items-center justify-center">
+            <div className="bg-brand-gray space-y-10 text-slate-950 min-h-dvh flex flex-col items-center justify-center pb-20">
+
                 <picture>
                     <img src="./logo.png" alt="two-side-of-english" className="w-36 h-56w-56 h-56  flex items-center justify-center " />
                 </picture>
