@@ -42,7 +42,7 @@ export const Home = () => {
                             <BookOpen size="70px" color="white" />
                         </figure>
 
-                        <p className="text-center text-lg font-medium">30 Questions</p>
+                        <p className="text-center text-lg font-medium">50 Questions at Database</p>
                     </section>
 
                     <section className="space-y-4 w-max h-max">
